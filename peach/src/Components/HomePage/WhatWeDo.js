@@ -1,105 +1,82 @@
-import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import { MDBIcon } from 'mdbreact';
-import styled from 'styled-components';
+import React from "react";
+import firstLogo from "../../Peach/tap.png";
+import secondLogo from "../../Peach/Group.png";
+import thirdLogo from "../../Peach/Vector.png";
+import styled from "styled-components";
 
-const Styles = styled.div`
+const Styles = styled.section`
+    margin-bottom: 5em;
   .whatwedo {
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     font-weight: bold;
-    position: static;
-    // height: 200px !important;
-    width: 100%;
-    margin-top: 100px;
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: space-around;
+    align-content: center;
+    height: 100%;
+    width: 97vw;
     overflow: hidden;
-    left: 0px;
-    // margin-top: 25rem !important;
-    background: white;
-    padding-top: 20px;
+    div {
+      min-width: 30vw;
+      height: 10em;
+      margin-top: 5em;
+      text-align: center;
+    }
   }
 
   h2 {
-    // margin: 150px;
-    margin-bottom: 20px;
+    margin-top: 5em;
     color: #3b7dd8;
+    margin-left: 4em;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .whatwedo {
+      grid-template-columns: 1fr;
+      margin-top: 0;
+      overflow: hidden;
+      div {
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 4em;
+
+        // &:nth-child(1){
+        //   margin-top: 20em;
+        // }
+        img {
+          z-index-1;
+        }
+      }
+    }
+    h2 {
+      text-align: center;
+      margin-left: 0;
+      margin-bottom: 5em;
+    }
   }
 `;
 
 const WhatWeDo = () => {
   return (
-    <Container>
-      <Styles>
-        <section>
-          <Row className="whatwedo">
-            <h2>What We Do</h2>
-            <Row className="text-center">
-              <Col
-                style={{
-                  marginLeft: 50,
-                  verticalAlign: 'center',
-                  alignSelf: 'center',
-                  width: 100
-                }}
-              >
-                <MDBIcon
-                  icon="hands-helping"
-                  style={{
-                    marginTop: 30,
-                    marginLeft: 40,
-                    fontSize: 50,
-                    color: '#3b7dd8'
-                  }}
-                />
-                <br />
-                <p className="mt-2 ml-5">Product Design and Strategy</p>
-              </Col>
-              <Col
-                style={{
-                  marginLeft: 50,
-                  verticalAlign: 'center',
-                  alignSelf: 'center',
-                  width: 100
-                }}
-              >
-                <MDBIcon
-                  icon="tv"
-                  style={{
-                    marginTop: 30,
-                    marginLeft: 40,
-                    fontSize: 50,
-                    color: '#3b7dd8'
-                  }}
-                />
-                <br />
-                <p className="mt-2 ml-5">Product Development</p>
-              </Col>
-              <Col
-                style={{
-                  marginLeft: 50,
-                  verticalAlign: 'center',
-                  alignSelf: 'center',
-                  width: 100
-                }}
-              >
-                <MDBIcon
-                  far
-                  icon="lightbulb"
-                  style={{
-                    marginTop: 30,
-                    marginLeft: 40,
-                    fontSize: 50,
-                    color: '#3b7dd8'
-                  }}
-                />
-                <br />
-                <p className="mt-2 ml-5">Technical Leadership</p>
-              </Col>
-            </Row>
-          </Row>
-        </section>
-      </Styles>
-    </Container>
+    <Styles>
+      <h2>What We Do</h2>
+      <div className="whatwedo">
+        <div>
+          <img src={firstLogo} alt="first_logo" />
+          <p>Product Design and Strategy</p>
+        </div>
+        <div>
+          <img src={secondLogo} alt="second_logo" />
+          <p>Product Development</p>
+        </div>
+        <div>
+          <img src={thirdLogo} alt="third_logo" />
+          <p>Technical Leadership</p>
+        </div>
+      </div>
+    </Styles>
   );
 };
 

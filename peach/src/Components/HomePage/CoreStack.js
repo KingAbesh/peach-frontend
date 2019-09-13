@@ -1,73 +1,143 @@
-import React from 'react';
-import { CoreStacks } from './CoreStacks';
-import { MDBContainer, MDBRow, MDBCol, MDBBtn } from 'mdbreact';
-import styled from 'styled-components';
+import React from "react";
+import { CoreStacks } from "./CoreStacks";
+import styled from "styled-components";
+import reactlogo from "../../Peach/React.svg";
+import vuelogo from "../../Peach/Vue.png";
+import laravellogo from "../../Peach/Laravel.png";
+import javalogo from "../../Peach/Java.png";
 
 const Styles = styled.section`
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: bold;
-  position: static;
-  // margin-top: 70rem;
-  display: block;
-  width: 90%;
-  height: 100%;
-  margin-top: 150px;
-  overflow: hidden;
+  margin-top: 4em;
+  padding: 3vw;
+  .core__stacks {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 5em;
+    grid-row-gap: 2em;
+    width: 97vw;
+    height: 100%;
+    overflow: hidden;
+    grid-template-areas:
+      "core aside"
+      "card-flex blog";
 
-  h3 {
-    display: inline-block;
-    color: #3b7dd8;
-    margin-bottom: 50px;
-  }
+    .card__flex {
+      display: grid;
+      grid-template-columns: repeat(4, 150px);
+      justify-content: space-around;
+      grid-area: card-flex;
+    }
 
-  .right {
-    float: right;
-    margin-right: 210px;
+    h3 {
+      display: inline-block;
+      color: #3b7dd8;
+      margin-top: 50px;
+    }
+
+    .aside {
+      grid-area: aside;
+    }
+
+    .core {
+      grid-area: core;
+    }
+
+    .blog {
+      grid-area: blog;
+    }
+
+    .button {
+      background: #3b7dd8 !important;
+    }
   }
-`;
+  
+  @media only screen and (max-width: 1067px) {
+    .core__stacks {
+      grid-template-columns: 1fr;
+      width: 100vw;
+      height: 100%;
+      grid-template-areas:
+      "core"
+      "card-flex"
+      "aside"
+      "blog";
+      .card__flex {
+        grid-template-columns: repeat(2, 300px);
+        justify-content: space-around;
+        .corestacks {
+          margin: 0 2em 3em 0;
+        }
+      }
+        }
+      }
+    @media only screen and (max-width: 760px) {
+      .core__stacks {
+        grid-template-columns: 1fr;
+        width: 100vw;
+        height: 100%;
+        grid-template-areas:
+        "core"
+        "card-flex"
+        "aside"
+        "blog";
+    .card__flex {
+        grid-template-columns: 300px;
+        justify-content: space-around;
+        .corestacks {
+          margin: 0 0 3em 0;
+        }
+        }
+      }
+    }
+  }
+    `;
 
 const stacks = [
-  { icon: 'react', text: 'React', style: { fontSize: 50 } },
-  { icon: 'vuejs', text: 'Vue', style: { fontSize: 50 } },
-  { icon: 'laravel', text: 'Laravel', style: { fontSize: 50 } },
-  { icon: 'java', text: 'Java', style: { fontSize: 50 } }
+  { icon: `${reactlogo}`, text: "React" },
+  { icon: `${vuelogo}`, text: "Vue" },
+  { icon: `${laravellogo}`, text: "Laravel" },
+  { icon: `${javalogo}`, text: "Java" }
 ];
 
 export const CoreStack = () => (
-  <MDBContainer>
-    <Styles>
-      <h3>Core Stacks</h3>
-      <h3 className="right">Blog</h3>
-      <p>
-        Here are a few packages our engineers work with to ensure <br /> an
-        excellent & problem solving project is achieved
-      </p>
-      <MDBRow className="pr-5" xs="12">
+  <Styles>
+    <div className="core__stacks">
+      <div className="core">
+        <h3>Core Stacks</h3>
+        <p>
+          Here are a few packages our engineers work with to ensure an excellent
+          & problem solving project is achieved
+        </p>
+      </div>
+      <h3 className="aside">Blog</h3>
+      <div className="card__flex">
         {stacks.map((stack, i) => (
           <CoreStacks {...stack} key={i} />
         ))}
-        <MDBCol md="4" xs="12" className="pl-5" style={{marginRight: -50}}>
-          <span>Aug 6, 2019</span>
-          <h4>
-            Figma Uyo Meetup <br /> -Techpoint
-          </h4>
-          <p>
-            On Wednesday, 27th June, a Figma Uyo Meetup was held in the
-            University of Uyo organized by Mfonobong Umondia who is...
-          </p>
-          <br />
-          <br />
-          <span>Aug 6, 2019</span>
-          <h4>
-            Figma Uyo Meetup <br /> -Techpoint
-          </h4>
-          <p>
-            On Wednesday, 27th June, a Figma Uyo Meetup was held in the
-            University of Uyo organized by Mfonobong Umondia who is...
-          </p>
-          <MDBBtn color="primary">Read More -></MDBBtn>
-        </MDBCol>
-      </MDBRow>
-    </Styles>
-  </MDBContainer>
+      </div>
+      <div className="blog">
+        <span>Aug 6, 2019</span>
+        <h4>
+          Figma Uyo Meetup <br /> -Techpoint
+        </h4>
+        <p>
+          On Wednesday, 27th June, a Figma Uyo Meetup was held in the University
+          of Uyo organized by Mfonobong Umondia who is...
+        </p>
+        <br />
+        <br />
+        <span>Aug 6, 2019</span>
+        <h4>
+          Figma Uyo Meetup <br /> -Techpoint
+        </h4>
+        <p>
+          On Wednesday, 27th June, a Figma Uyo Meetup was held in the University
+          of Uyo organized by Mfonobong Umondia who is...
+        </p>
+        <button className="btn btn-primary button">Read More</button>
+      </div>
+    </div>
+  </Styles>
 );

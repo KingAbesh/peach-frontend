@@ -1,68 +1,73 @@
-import React from 'react';
-import { MDBRow, MDBCol, MDBBtn } from 'mdbreact';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import childheaderimage from "../../Peach/undraw_creative_process_q6aw.svg";
+import headerimage from "../../Peach/headerimage.svg";
+import logo from "../../Peach/Group.svg";
 
 const Styles = styled.header`
   .header {
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     font-weight: bold;
-    position: relative;
-    display: flex;
-    padding: 0 !important;
-    overflow: hidden;
-    // height: 100%;
-    left: 0px;
-    margin: 0px !important;
-    // top: -200px;y
+    display: grid;
+    min-width: 100vw;
+    grid-template-columns: 350px 350px;
     color: white;
-    background: #3b7dd8;
-    background-size: cover !important;
-    // box-shadow: 0px 8px 11px #a7cafb;
-    z-index: 1;
+    min-height: 100vh;
+    background-image: url(${headerimage});
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    justify-content: space-around;
+    overflow: hidden;
   }
 
-  h2 {
-    margin-left: 100px !important;
-    margin-top: 140px !important;
+  .header__div {
+    min-width: 50vw;
+    &:nth-child(1) {
+      text-align: start;
+      padding-top: 2em;
+      h2 {
+        font-size: 2.5rem;
+      }
+      &:nth-child(2){
+        padding: 1em;
+        img {
+          width: 50vw;
+          height: 100vh;
+        }
+      }
+    }
+    }
   }
 
-  .Btn {
-    border-radius: 100px !important;
-    float: right;
-    margin-right: 50px;
-    margin-top: 30px !important;
+  @media only screen and (max-width: 768px) {
+    .header {
+      grid-template-columns: 1fr;
+      top: 0;
+    }
+    .header__div {
+      justify-self: center;
+      height: 100%;
+      width: 100vw;
+    }
   }
-
-  @media only screen and (max-width: 529px) {
-    .peach {
-      display: block;
-      text-align: center;
-      margin-left: -50px;
-    }
-
-    .Btn {
-    display: flex;
-    width: 50%
-    margin-bottom: 40px;
-    align-self: center;
-    }
-    }
 `;
 
 export const Header = () => (
   <Styles>
-    <MDBRow className="header">
-      <MDBCol md="6" xs="12" className='peach'>
-        <h2 className="mb-5">
+    <div className="header">
+      <div className="header__div">
+        <div className="img__div">
+          <img src={logo} alt="logo" />
+        </div>
+        <h2>
           Peach remains steadfast and committed to progressive innovations for
           the benefit of one and all
         </h2>
-      </MDBCol>
-      <MDBCol md="6">
-        <MDBBtn color="danger" className="Btn">
-          Register
-        </MDBBtn>
-      </MDBCol>
-    </MDBRow>
+      </div>
+      <div className="header__div div2">
+        <img src={childheaderimage} alt="header_image" />
+      </div>
+    </div>
   </Styles>
 );
