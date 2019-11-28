@@ -2,7 +2,6 @@ import headerimage from "../../../Peach/headerimage.svg";
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
-  .header {
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
     display: grid;
@@ -16,37 +15,53 @@ export const HeaderWrapper = styled.header`
     object-fit: cover;
     justify-content: space-evenly;
     overflow: hidden;
-  }
-
+ 
   .header__div {
-    min-width: 50vw;
-    &:nth-child(1) {
+      padding: 50px;
+      min-width: 50vw;
       text-align: center;
       padding-top: 2em;
-      left: 3rem;
-      }
+      margin: auto;
       h2 {
-        font-size: 2rem;
+        font-size: 1.7rem;
+        
+      }
+      img {
+        display: block;
+        position: absolute;
+        top: 15px;
       }
       &:nth-child(2){
-        padding: 1em;
         img {
-          width: 50vw;
+          width: 35vw;
           height: 100vh;
         }
       }
     }
-    }
-  }
   @media only screen and (max-width: 768px) {
-    .header {
       grid-template-columns: 1fr;
-      top: 0;
+      width: 100%;
+      .header__div {
+      margin: 10rem auto;
+      min-width: 90vw;
+      text-align: center;
+      padding: 0 1rem;
+      top: -50rem;
+      h2 {
+        font-size: 1.4rem;
+        width: 100%;
+        
+      }
+      img {
+        height: 40px;
+      }
+      &:nth-child(2){
+        img {
+          margin-top: 300px;
+          height: inherit;
+          width: 50%;
+        }
+      }
     }
-    .header__div {
-      justify-self: center;
-      height: 100%;
-      width: 100vw;
     }
-  }
 `

@@ -12,9 +12,9 @@ const HomePage = () => {
   return (
     <HomepageWrapper>
       <Header />
-      <WhatWeDo />
+      {/* <WhatWeDo />
       <Philosophy />
-      <CoreStack />
+      <CoreStack /> */}
 
       {/* <Integrations/>
         <Team/>
