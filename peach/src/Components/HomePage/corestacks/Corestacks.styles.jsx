@@ -1,12 +1,43 @@
-import React from "react";
-import { CoreStacks } from "./CoreStacks";
 import styled from "styled-components";
-import reactlogo from "../../Peach/React.svg";
-import vuelogo from "../../Peach/Vue.png";
-import laravellogo from "../../Peach/Laravel.png";
-import javalogo from "../../Peach/Java.png";
 
-const Styles = styled.section`
+
+export const CorestacksWrapper = styled.article`
+  .corestacks {
+    height: 150px;
+    background: #3b7dd8;
+    color: #FFF;
+    box-shadow: 0px 8px 11px rgba(0, 0, 0, 0.25);
+    display: flex !important;
+    align-items: center;
+    padding: 0;
+    transition: 0.5s;
+    &:hover {
+      background: #E3E3E3;
+      color: rgba(110, 110, 110, 0.6);
+      color: #000;
+    }
+    p {
+      position: absolute;
+      bottom: 0;
+      right: 40%;
+    }
+
+    div {
+      width: 100%;
+    }
+
+    img {
+      display: block;
+      width: 50%;
+      height: 70%;
+      margin: 0 auto;
+    }
+
+  }
+`;
+
+
+export const CorestackWrapper = styled.section`
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
   margin-top: 4em;
@@ -93,51 +124,3 @@ const Styles = styled.section`
     }
   }
     `;
-
-const stacks = [
-  { icon: `${reactlogo}`, text: "React" },
-  { icon: `${vuelogo}`, text: "Vue" },
-  { icon: `${laravellogo}`, text: "Laravel" },
-  { icon: `${javalogo}`, text: "Java" }
-];
-
-export const CoreStack = () => (
-  <Styles>
-    <div className="core__stacks">
-      <div className="core">
-        <h3>Core Stacks</h3>
-        <p>
-          Here are a few packages our engineers work with to ensure an excellent
-          & problem solving project is achieved
-        </p>
-      </div>
-      <h3 className="aside">Blog</h3>
-      <div className="card__flex">
-        {stacks.map((stack, i) => (
-          <CoreStacks {...stack} key={i} />
-        ))}
-      </div>
-      <div className="blog">
-        <span>Aug 6, 2019</span>
-        <h4>
-          Figma Uyo Meetup <br /> -Techpoint
-        </h4>
-        <p>
-          On Wednesday, 27th June, a Figma Uyo Meetup was held in the University
-          of Uyo organized by Mfonobong Umondia who is...
-        </p>
-        <br />
-        <br />
-        <span>Aug 6, 2019</span>
-        <h4>
-          Figma Uyo Meetup <br /> -Techpoint
-        </h4>
-        <p>
-          On Wednesday, 27th June, a Figma Uyo Meetup was held in the University
-          of Uyo organized by Mfonobong Umondia who is...
-        </p>
-        <button className="btn btn-primary button">Read More</button>
-      </div>
-    </div>
-  </Styles>
-);

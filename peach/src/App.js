@@ -1,16 +1,16 @@
-import React from 'react';
-import HomePage from './Components/HomePage/HomePage';
+import React, {Fragment} from 'react';
+import HomePage from './Components/HomePage/Homepage/homepage.component';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <Fragment>
       <Router>
         <Switch>
           <Route exact path="/" component={HomePage} />
         </Switch>
       </Router>
-    </div>
+    </Fragment>
   );
 }
 

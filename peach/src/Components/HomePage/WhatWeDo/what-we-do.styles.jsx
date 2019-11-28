@@ -1,10 +1,6 @@
-import React from "react";
-import firstLogo from "../../Peach/tap.png";
-import secondLogo from "../../Peach/Group.png";
-import thirdLogo from "../../Peach/Vector.png";
 import styled from "styled-components";
 
-const Styles = styled.section`
+export const WhatwedoWrapper = styled.section`
     margin-bottom: 5em;
   .whatwedo {
     font-family: "Quicksand", sans-serif;
@@ -57,27 +53,3 @@ const Styles = styled.section`
     }
   }
 `;
-
-const WhatWeDo = () => {
-  return (
-    <Styles>
-      <h2>What We Do</h2>
-      <div className="whatwedo">
-        <div>
-          <img src={firstLogo} alt="first_logo" />
-          <p>Product Design and Strategy</p>
-        </div>
-        <div>
-          <img src={secondLogo} alt="second_logo" />
-          <p>Product Development</p>
-        </div>
-        <div>
-          <img src={thirdLogo} alt="third_logo" />
-          <p>Technical Leadership</p>
-        </div>
-      </div>
-    </Styles>
-  );
-};
-
-export default WhatWeDo;
