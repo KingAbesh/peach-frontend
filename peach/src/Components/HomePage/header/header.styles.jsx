@@ -60,6 +60,7 @@ export const HeaderWrapper = styled.header`
           margin-top: 300px;
           height: inherit;
           width: 50%;
+          left: 25%;
         }
       }
     }
