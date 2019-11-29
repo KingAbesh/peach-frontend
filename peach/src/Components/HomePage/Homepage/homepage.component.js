@@ -4,21 +4,24 @@ import WhatWeDo from "../WhatWeDo/what-we-do.component";
 import { Philosophy } from "../Philosophy/philosophy.component";
 import { CoreStack } from "../corestacks/core-stack.component";
 import {HomepageWrapper} from "./homepages.styles"
-// import {Integrations} from './Integrations'
-// import Team from './Team'
-// import Footer from './footer'
+import {Integrations} from '../Integration/integrations.component'
+import {ContactForm} from "../contact-form/contact-form.component"
+import {Become} from "../become/become.component"
+import {AboutUs} from "../about-us/about-us.component"
+import Footer from '../footer/footer.component'
 
 const HomePage = () => {
   return (
     <HomepageWrapper>
       <Header />
-      {/* <WhatWeDo />
+      <WhatWeDo />
       <Philosophy />
-      <CoreStack /> */}
-
-      {/* <Integrations/>
-        <Team/>
-        <Footer/> */}
+      <CoreStack />
+      <Integrations/>
+      <ContactForm/>
+      <Become/>
+      <AboutUs/>
+      <Footer/>
     </HomepageWrapper>
   );
 };

@@ -51,7 +51,7 @@ export const CoreStack = () => (
           On Wednesday, 27th June, a Figma Uyo Meetup was held in the University
           of Uyo organized by Mfonobong Umondia who is...
         </p>
-        <button className="btn btn-primary button">Read More</button>
+        <button className="btn btn-outline-primary button mt-4">Read More</button>
       </div>
     </div>
   </CorestackWrapper>

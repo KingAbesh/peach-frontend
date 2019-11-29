@@ -4,13 +4,12 @@ import {PhilosophyWrapper} from "./philosophy.styles"
 
 const Philosophy = () => (
   <PhilosophyWrapper>
-    <div className="philosophy">
       <div>
         <h3>Philosophy</h3>
-        <h6>
+        <small>
           Peach remains steadfast & committed to progressive innovations for the
           benefit of one and all
-        </h6>
+        </small>
       </div>
       <div>
         <h4>01</h4>
@@ -28,7 +27,6 @@ const Philosophy = () => (
         <h4>03</h4>
         <p>Technical Leadership</p>
       </div>
-    </div>
   </PhilosophyWrapper>
 );
 

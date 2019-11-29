@@ -9,11 +9,21 @@ export const IntegrationsWrapper = styled.section`
     bottom: 70px;
     padding-top: 50px;
     color: #3b7dd8;
+    font-size: 30px;
+  }
+
+  h4 {
+    font-weight: 1000;
+    margin-bottom: 1.5rem;
   }
 
   .integ {
     display: flex;
     top: 50px;
     justify-content: center;
+  }
+
+  @media (max-width: 768px){
+    text-align: center;
   }
 `;
