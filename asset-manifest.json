@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/peach-consolidated/static/css/main.9a1b55f0.chunk.css",
+    "main.js": "/peach-consolidated/static/js/main.8e64443a.chunk.js",
+    "main.js.map": "/peach-consolidated/static/js/main.8e64443a.chunk.js.map",
+    "runtime~main.js": "/peach-consolidated/static/js/runtime~main.347b6f75.js",
+    "runtime~main.js.map": "/peach-consolidated/static/js/runtime~main.347b6f75.js.map",
+    "static/css/2.5a34e132.chunk.css": "/peach-consolidated/static/css/2.5a34e132.chunk.css",
+    "static/js/2.cdf0af60.chunk.js": "/peach-consolidated/static/js/2.cdf0af60.chunk.js",
+    "static/js/2.cdf0af60.chunk.js.map": "/peach-consolidated/static/js/2.cdf0af60.chunk.js.map",
+    "index.html": "/peach-consolidated/index.html",
+    "precache-manifest.d255b9945b93f7e9b602893581d9beca.js": "/peach-consolidated/precache-manifest.d255b9945b93f7e9b602893581d9beca.js",
+    "service-worker.js": "/peach-consolidated/service-worker.js",
+    "static/css/2.5a34e132.chunk.css.map": "/peach-consolidated/static/css/2.5a34e132.chunk.css.map",
+    "static/css/main.9a1b55f0.chunk.css.map": "/peach-consolidated/static/css/main.9a1b55f0.chunk.css.map",
+    "static/media/Group.svg": "/peach-consolidated/static/media/Group.1305a8bc.svg",
+    "static/media/Group1.svg": "/peach-consolidated/static/media/Group1.0158c44c.svg",
+    "static/media/React.svg": "/peach-consolidated/static/media/React.a275e702.svg",
+    "static/media/mdb.css": "/peach-consolidated/static/media/arrow_right.8ef6a08c.svg",
+    "static/media/headerimage.svg": "/peach-consolidated/static/media/headerimage.2e774ad2.svg",
+    "static/media/undraw_creative_process_q6aw.svg": "/peach-consolidated/static/media/undraw_creative_process_q6aw.12fbac70.svg"
+  }
+}
