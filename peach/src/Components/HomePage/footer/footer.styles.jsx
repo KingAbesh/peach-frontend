@@ -11,6 +11,13 @@ font-weight: bold;
 a {
     color: #6E6E6E !important;  
 }
+@media (max-width: 768px){
+    img {
+        display: block;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+}
 `;
 
 
