@@ -17,3 +17,7 @@ ReactDOM.render(<App />, document.getElementById("root"));
 serviceWorker.unregister();
 
 // "build": "npm-run-all build:css build:react",
+// "start": "npm-run-all --parallel watch:css start:react",
+//     "build": "react-scripts build",
+//     "build:css": "postcss src/styles/tailwind.css -o src/index.css",
+//     "watch:css": "postcss src/styles/tailwind.css -o src/index.css -w",
